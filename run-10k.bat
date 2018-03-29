@@ -1,0 +1,1 @@
+python27 main.py < Funcionarios-10K.json

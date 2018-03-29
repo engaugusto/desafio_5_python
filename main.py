@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 # Carlos Augusto
 # 29/03/2018
 # Desafio de programcao
 # https://osprogramadores.com/desafios/d05/
-# _*_ coding:utf-8 _*_
+import os, sys
 import urllib
 import simplejson as json
 import pprint
@@ -127,17 +129,17 @@ ik = 0
 
 for item in jsonResponse['funcionarios']:
 	if item['salario'] == mintmp:
-		lstMin.append(mintmp)
+		lstMin.append("%s %s|%0.2f"%(item['nome'],item['sobrenome'],item['salario']))
 	if item['salario'] == maxtmp:
-		lstMax.append(maxtmp)
+		lstMax.append("%s %s|%0.2f"%(item['nome'],item['sobrenome'],item['salario']))
 
 #lstMin.append(mintmp)
 #lstMax.append(maxtmp)
 
 for max in lstMax:
-	print 'global_max|'"%0.2f" % max
+	print 'global_max|%s' % max
 for min in lstMin:
-	print 'global_min|'"%0.2f" % min
+	print 'global_min|%s' % min
 
 print 'global_avg|'"%0.2f" % (avg)
 
@@ -197,7 +199,7 @@ for at in menos_emp:
 	print "least_employees|%s"%at.encode("utf-8")
 	
 for maiorSolSobrenome in lstMaiorSalSobrenome:
-	s="last_name_max|%s|%s|%s"%(maiorSolSobrenome.sobrenome,maiorSolSobrenome.nome,maiorSolSobrenome.val)
+	s="last_name_max|%s|%s|%0.2f"%(maiorSolSobrenome.sobrenome,maiorSolSobrenome.nome,maiorSolSobrenome.val)
 	print s.encode("utf-8")
 			
 #	for k2,v2 in lstSobrenomes.iteritems():
@@ -224,7 +226,6 @@ for maiorSolSobrenome in lstMaiorSalSobrenome:
 b = datetime.datetime.now()
 c = b - a
 
-#print ''
 #print 'diff miliseconds' , c.total_seconds() * 1000 # milliseconds
 #print 'diff seconds' , c.total_seconds() / 60 # seconds
 #print 'diff min' , c.total_seconds() / 60 / 60 # min
