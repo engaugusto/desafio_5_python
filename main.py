@@ -1,3 +1,7 @@
+# Carlos Augusto
+# 29/03/2018
+# Desafio de programcao
+# https://osprogramadores.com/desafios/d05/
 # _*_ coding:utf-8 _*_
 import urllib
 import simplejson as json
