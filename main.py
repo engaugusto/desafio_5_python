@@ -220,7 +220,7 @@ for maiorSolSobrenome in lstMaiorSalSobrenome:
 b = datetime.datetime.now()
 c = b - a
 
-print ''
-print 'diff miliseconds' , c.total_seconds() * 1000 # milliseconds
-print 'diff seconds' , c.total_seconds() / 60 # seconds
-print 'diff min' , c.total_seconds() / 60 / 60 # min
+#print ''
+#print 'diff miliseconds' , c.total_seconds() * 1000 # milliseconds
+#print 'diff seconds' , c.total_seconds() / 60 # seconds
+#print 'diff min' , c.total_seconds() / 60 / 60 # min
