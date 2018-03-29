@@ -1,1 +1,1 @@
-python main.py < funcionarios.json
+python27 main.py < funcionarios.json
