@@ -180,10 +180,10 @@ for key, value in lstAreasVal.iteritems():
 		if key <> item["area"]:
 			continue
 		if item["salario"] == maxtmpArea[key].val and item["area"] == maxtmpArea[key].area:
-			s="area_max|%s|%s|%s" % (lstAreas[key],"%s %s" % (item["nome"],item["sobrenome"] ),item["salario"])
+			s="area_max|%s|%s|%0.2f" % (lstAreas[key],"%s %s" % (item["nome"],item["sobrenome"] ),item["salario"])
 			print s.encode("utf-8")
 		if item["salario"] == mintmpArea[key].val and item["area"] == mintmpArea[key].area:
-			s="area_min|%s|%s|%s" % (lstAreas[key],"%s %s" % (item["nome"],item["sobrenome"] ),item["salario"])
+			s="area_min|%s|%s|%0.2f" % (lstAreas[key],"%s %s" % (item["nome"],item["sobrenome"] ),item["salario"])
 			print s.encode("utf-8")
 	nnn='area_avg|%s|'"%0.2f" % (lstAreas[key], avgArea[key])
 	print nnn.encode("utf-8")
